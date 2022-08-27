@@ -23,8 +23,7 @@ stages:
       - task: Docker@2
         inputs:
           containerRegistry: 'dcker'
-          repository: 'shree/ram'
+          repository: 'shree'
           command: 'buildAndPush'
           Dockerfile: '**/dockerfile'
           tags: '$(tag)'
-    
