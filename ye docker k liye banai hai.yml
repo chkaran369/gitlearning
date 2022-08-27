@@ -24,7 +24,7 @@ stages:
       displayName: Build an image
       inputs:
         containerRegistry: 'dcker'
-        repository: 'shree/ram'
+        repository: 'chkaran/shree'
         command: 'buildAndPush'
         Dockerfile: '**/dockerfile'
         tags: '$(tag)'
