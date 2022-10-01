@@ -32,7 +32,7 @@ steps:
     backendAzureRmResourceGroupLocation: 'westeurope'
     backendAzureRmStorageAccountName: 'backendstorageshreeramji'
     backendAzureRmContainerName: 'backendcontainrshreeramji'
-    backendAzureRmKey: 'keybackendkliye'
+    backendAzureRmKey: 'keybackendkliye.tfstate'
     allowTelemetryCollection: true
 
 
