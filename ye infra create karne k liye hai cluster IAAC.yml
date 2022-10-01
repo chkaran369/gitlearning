@@ -20,24 +20,25 @@ steps:
    secureFile: 'sshfile.pub'
   
 
+
 - task: TerraformCLI@0
   inputs:
     command: 'init'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
-    commandOptions: '-var client_id=$( client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(yepublickey.secureFilePath)'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/configuration/iaac/azure/kubernetes'
+    # commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(publickey.secureFilePath)'
     backendType: 'azurerm'
-    backendServiceArm: 'azuree'
+    backendServiceArm: 'azure-resource-manager-service-connection'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'backendkaresource'
+    backendAzureRmResourceGroupName: 'terraform-backend-rg'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'backendstorageshreeramji'
-    backendAzureRmContainerName: 'backendcontainrshreeramji'
-    backendAzureRmKey: 'keybackendkliye.tfstate'
-    allowTelemetryCollection: true
+    backendAzureRmStorageAccountName: 'storageacctrangaxyz'
+    backendAzureRmContainerName: 'storageacctrangacontainer'
+    backendAzureRmKey: 'kubernetes-dev.tfstate'
+
 
 
 - task: TerraformCLI@0
   inputs:
     command: 'destroy'
-    workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
+    workingDirectory: '$(System.DefaultWorkingDirectory)' 
     environmentServiceName: 'azuree'
