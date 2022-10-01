@@ -9,15 +9,16 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
 
 - task: DownloadSecureFile@1
   name: yepublickey
   inputs:
-    secureFile: 'sshfile.pub'
-
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+   secureFile: 'sshfile.pub'
+  
 
 - task: TerraformCLI@0
   inputs:
