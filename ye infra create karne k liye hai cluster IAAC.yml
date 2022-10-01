@@ -40,4 +40,4 @@ steps:
   inputs:
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)'
-    environmentServiceName: 'azure-resource-manager-service-connection'
+    environmentServiceName: 'azuree'
