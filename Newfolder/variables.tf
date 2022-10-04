@@ -3,7 +3,7 @@ variable client_secret {}
 variable ssh_public_key {}
 
 variable environment {
-    default = "ramji"
+    default = "ram"
 }
 
 variable location {
@@ -11,7 +11,7 @@ variable location {
 }
 
 variable node_count {
-  default = 2
+  default = 3
 }
 
 
