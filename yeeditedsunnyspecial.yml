@@ -1,0 +1,44 @@
+
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- main
+
+pool:
+  vmImage: ubuntu-latest
+
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+
+
+- task: DownloadSecureFile@1
+  name: yepublickey
+  inputs:
+    secureFile: 'sshfile.pub'
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(yepublickey.secureFilePath)'
+    backendType: 'azurerm'
+    backendServiceArm: 'azuree'
+    ensureBackend: true
+    backendAzureRmResourceGroupName: 'backendkaresource22'
+    backendAzureRmResourceGroupLocation: 'westeurope'
+    backendAzureRmStorageAccountName: 'backendstorageshreeramjikijai'
+    backendAzureRmContainerName: 'backendcontainrshreeramjikijai'
+    backendAzureRmKey: 'kubernetes-dev.tfstate'
+    allowTelemetryCollection: true
+
+
+- task: TerraformCLI@0
+  inputs:
+    command: 'destroy'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
+    environmentServiceName: 'azuree'
