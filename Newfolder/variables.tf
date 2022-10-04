@@ -3,7 +3,7 @@ variable client_secret {}
 variable ssh_public_key {}
 
 variable environment {
-    default = "ramji-dev"
+    default = "ramji"
 }
 
 variable location {
@@ -17,13 +17,13 @@ variable node_count {
 
 
 variable dns_prefix {
-  default = "bjrngbli-ktst"
+  default = "bjbli"
 }
 
 variable cluster_name {
-  default = "bjrngbli-ktst"
+  default = "bjbli"
 }
 
 variable resource_group {
-  default = "shree_kbnts"
+  default = "shre"
 }
