@@ -44,8 +44,8 @@ steps:
     commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(yepublickey.secureFilePath)'
 
 
-# - task: TerraformCLI@0
-#   inputs:
-#     command: 'destroy'
-#     workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
-#     environmentServiceName: 'azuree'
+- task: TerraformCLI@0
+  inputs:
+    command: 'destroy'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
+    environmentServiceName: 'azuree'
