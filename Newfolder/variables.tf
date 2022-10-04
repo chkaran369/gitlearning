@@ -17,11 +17,11 @@ variable node_count {
 
 
 variable dns_prefix {
-  default = "bjrngbli-k8stst"
+  default = "bjrngbli-ktst"
 }
 
 variable cluster_name {
-  default = "bjrngbli-k8stst"
+  default = "bjrngbli-ktst"
 }
 
 variable resource_group {
