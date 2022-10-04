@@ -29,7 +29,7 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azuree'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'backendkaresource22'
+    backendAzureRmResourceGroupName: 'backendkaresource32'
     backendAzureRmResourceGroupLocation: 'westeurope'
     backendAzureRmStorageAccountName: 'bkndstorageshreeramjikijai'
     backendAzureRmContainerName: 'bkndcontainrshreeramjikijai'
