@@ -33,6 +33,10 @@ resource "azurerm_kubernetes_cluster" "terraform-k8s" {
   }
 }
 
+provider "azurerm" {
+   features {}
+}
+
 terraform {
   backend "azurerm" {
     # storage_account_name="<<storage_account_name>>" #OVERRIDEe in TERRAFORM init
