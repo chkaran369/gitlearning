@@ -29,10 +29,10 @@ steps:
     backendType: 'azurerm'
     backendServiceArm: 'azuree'
     ensureBackend: true
-    backendAzureRmResourceGroupName: 'backendkaresource32'
+    backendAzureRmResourceGroupName: 'backendkaresource42'
     backendAzureRmResourceGroupLocation: 'westeurope'
-    backendAzureRmStorageAccountName: 'bkndstorageshreeramjikijai'
-    backendAzureRmContainerName: 'bkndcontainrshreeramjikijai'
+    backendAzureRmStorageAccountName: 'bkndstrgshreeramjikijai'
+    backendAzureRmContainerName: 'bkndcntarshreeramjikijai'
     backendAzureRmKey: 'kubernetes-dev.tfstate'
     allowTelemetryCollection: true
 
