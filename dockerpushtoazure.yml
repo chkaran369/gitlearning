@@ -60,7 +60,7 @@ stages:
         action: 'deploy'
         kubernetesServiceConnection: 'kubernet'
         namespace: 'default'
-        manifests: '$(System.ArtifactsDirectory)Newfolder/config/deployment.yaml'
+        manifests: '$(System.ArtifactsDirectory)//Newfolder/config/deployment.yaml'
         containers: 'chkaran/shree:$(tag)'
 # Stage 2
 # Download the K8S Files
