@@ -48,4 +48,12 @@ steps:
   inputs:
     command: 'destroy'
     workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
+    runAzLogin: true
     environmentServiceName: 'azuree'
+# - task: TerraformCLI@0
+#   inputs:
+#     command: 'destroy'
+#     workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
+#     environmentServiceName: 'azuree'
+#     runAzLogin: true
+#     allowTelemetryCollection: false
