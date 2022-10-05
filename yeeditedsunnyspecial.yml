@@ -21,20 +21,20 @@ steps:
   inputs:
     secureFile: 'sshfile.pub'
 
-# - task: TerraformCLI@0
-#   inputs:
-#     command: 'init'
-#     workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
-#     commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(yepublickey.secureFilePath)'
-#     backendType: 'azurerm'
-#     backendServiceArm: 'azuree'
-#     ensureBackend: true
-#     backendAzureRmResourceGroupName: 'backendkaresource42'
-#     backendAzureRmResourceGroupLocation: 'westeurope'
-#     backendAzureRmStorageAccountName: 'bkndstrgshreeramjikijai'
-#     backendAzureRmContainerName: 'bkndcntarshreeramjikijai'
-#     backendAzureRmKey: 'kubernetes-dev.tfstate'
-#     allowTelemetryCollection: true
+- task: TerraformCLI@0
+  inputs:
+    command: 'init'
+    workingDirectory: '$(System.DefaultWorkingDirectory)/Newfolder'
+    commandOptions: '-var client_id=$(client_id) -var client_secret=$(client_secret) -var ssh_public_key=$(yepublickey.secureFilePath)'
+    backendType: 'azurerm'
+    backendServiceArm: 'azuree'
+    ensureBackend: true
+    backendAzureRmResourceGroupName: 'backendkaresource42'
+    backendAzureRmResourceGroupLocation: 'westeurope'
+    backendAzureRmStorageAccountName: 'bkndstrgshreeramjikijai'
+    backendAzureRmContainerName: 'bkndcntarshreeramjikijai'
+    backendAzureRmKey: 'kubernetes-dev.tfstate'
+    allowTelemetryCollection: true
 
 # - task: TerraformCLI@0
 #   inputs:
