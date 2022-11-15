@@ -17,13 +17,13 @@ variable node_count {
 
 
 variable dns_prefix {
-  default = "bjli"
+  default = "bali"
 }
 
 variable cluster_name {
-  default = "bjli"
+  default = "bali"
 }
 
 variable resource_group {
-  default = "shre"
+  default = "shri"
 }
