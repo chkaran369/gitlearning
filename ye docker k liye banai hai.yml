@@ -26,5 +26,5 @@ stages:
         containerRegistry: 'dcker'
         repository: 'chkaran/shree'
         command: 'buildAndPush'
-        Dockerfile: '**/dockerfile'
+        Dockerfile: '**/Dockerfile'
         tags: '$(tag)'
